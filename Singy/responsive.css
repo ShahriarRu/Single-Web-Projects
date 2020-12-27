@@ -1,0 +1,54 @@
+@media only screen and (max-width: 1024px){
+    .hero-text h1{
+        font-size: 200%;
+        letter-spacing: 2px;
+    }
+
+    .hero-text p{
+        font-size: 120%;
+    }
+
+    .hero-text .download-now{
+        font-size: 70%;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .hero-text h1{
+        font-size: 160%;
+        letter-spacing: 2px;
+    }
+
+    .hero-text p{
+        font-size: 80%;
+        margin-left: 0px;
+        
+    }
+    .hero-text .download-now{
+        padding: 8px;
+    }
+    .hero-text{
+        padding: 10px;
+    }
+
+    .container{
+        height: 80vh !important;
+    }
+    .wrapper{
+        height: 60vh !important;
+    }
+
+    .hero{
+        grid-template-rows: 40vh !important; 
+    }
+}
+
+@media only screen and (max-width: 547px) {
+    .hero-text h1{
+        font-size: 140%;
+        letter-spacing: 1px;
+    }
+    .hero-text p{
+        display: none;
+    }
+}
