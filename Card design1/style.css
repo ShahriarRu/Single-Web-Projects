@@ -1,0 +1,205 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #131313;
+}
+
+.container{
+	position: relative;
+}
+
+.container .card{
+	position: relative;
+	width: 380px;
+	height: 500px;
+	background: #232323;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.container .card:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #9bdc28;
+	clip-path: circle(180px at 80% 20%);
+	transition: 0.5s ease-in-out;
+}
+
+.container .card:hover:before{
+	clip-path: circle(320px at 80% -20%);
+}
+
+.container .card:after{
+	content: 'Nike';
+	position: absolute;
+	top: 30%;
+	left: -20%;
+	font-size: 15em;
+	font-weight: 800;
+	font-style: italic;
+	color: rgba(255, 255, 255, 0.04);
+}
+
+.container .card .imgBox{
+	position: absolute;
+	top: 34%;
+	left: 20%;
+	transform: translateY(-50%);
+	z-index: 100;
+	width: 100%;
+	height: 220px;
+	transition: 0.5s;
+
+}
+
+.container .card:hover .imgBox{
+	top: -2%;
+	left: 0%;
+	/*transform: translateY(0%);*/
+	transform: translateY(-20%) rotate(-30deg);
+
+}
+
+.container .card .imgBox img{
+	
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 300px;
+}
+
+.container .card .contenBox{
+	position: absolute;
+	bottom: 5%;
+	width: 100%;
+	height: 120px;
+	text-align: center;
+	transition: 0.6s;
+	z-index: 10;
+}
+
+.container .card:hover .contenBox{
+	height: 200px;
+	
+}
+
+.container .card .contenBox h2{
+	position: relative;
+	font-weight: 600;
+	letter-spacing: 4px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.container .card .contenBox .size,
+.container .card .contenBox .color{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 25px;
+	transition: 0.5s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.container .card:hover .contenBox .size{
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.5s;
+	font-size: 1.2em;
+}
+
+.container .card:hover .contenBox .color{
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.6s;
+	font-size: 1.2em;
+}
+
+.container .card .contenBox .size h3,
+.container .card .contenBox .color h3{
+	color: #fff;
+	font-weight: 300;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-right: 8px;
+}
+
+.container .card .contenBox .size span{
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	font-size: 14px;
+	display: inline-block;
+	color: #111;
+	background: #fff;
+	margin: 0 5px;
+	transition: 0.5s; 
+	color: #111;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.container .card .contenBox .size span:hover{
+	background: #9bdc28;
+}
+
+.container .card .contenBox .color span{
+	width: 20px;
+	height: 20px;
+	background: #ff0;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+}
+.container .card .contenBox .color span:nth-child(2){
+	background: #9bdc28;
+}
+
+.container .card .contenBox .color span:nth-child(3){
+	background: #03a9f4;
+}
+
+.container .card .contenBox .color span:nth-child(4){
+	background: #e91e63;
+}
+
+.container .card .contenBox a{
+	display: inline-block;
+	padding: 10px 20px;
+	background: #fff;
+	border-radius: 4px;
+	margin-top: 10px;
+	text-decoration: none;
+	font-weight: 600;
+	columns: #111;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: 0.5s;
+}
+
+.container .card:hover .contenBox a{
+	opacity: 1;
+	transform: translateY(0px);
+	transition-delay: 0.7s;
+}
+
+.container .card .contenBox a:hover{
+	background: #9bdc28; 
+	color: #232323;
+	transition-delay: 0s;
+}
